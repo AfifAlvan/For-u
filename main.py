@@ -18,7 +18,7 @@ RETRIEVED_CONTEXT = 1  # Context to retrieve
 
 # Initialize ChatOllama Model
 try:
-    chat_model = ChatOllama(model="llama3.2:1b", temperature=0.8, num_predict=256)
+    chat_model = ChatOllama(model="llama3.2:1b", temperature=0.8, num_predict=256, host="http://localhost:8080")
 except Exception as e:
     raise RuntimeError(f"Failed to initialize ChatOllama model: {str(e)}")
 
